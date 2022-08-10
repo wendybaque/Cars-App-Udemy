@@ -10,18 +10,38 @@ function Car({children, color}) {
   //     return <p>no brand</p>
   //   }
   // }
-  const colorInfo = color ? (<p>Color : {color}</p>) : (<p>Color : no color</p>);
-  return (
-    <div style={{
+
+  let colorInfo = "";
+  if(color) {
+    colorInfo = color;
+  } else {
+    colorInfo = 'no color'
+  }
+
+  if (children) {
+    return (
+      <div style={{
+        backgroundColor:'lightblue',
+        width:'400px',
+        padding: '10px',
+        margin: '5px auto'
+        }}>
+        {brandInfo}
+        <p>Color : {colorInfo}</p>
+        {/* Même chose que :
+        {color ? <p>Color : {color}</p> : <p>Color : no color</p>} */}
+        {/* OU
+        <p>Color : {color ? color : "no color"}</p> */}
+  
+      </div>
+    )
+  }
+    return <p style={{
       backgroundColor:'lightblue',
       width:'400px',
       padding: '10px',
       margin: '5px auto'
-      }}>
-      {brandInfo}
-      {colorInfo}
-    </div>
-  )
+      }}> No Data</p>
 }
 
 export default Car;

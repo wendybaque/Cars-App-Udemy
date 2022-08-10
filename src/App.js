@@ -6,12 +6,13 @@ import './App.css';
 // Nécessite une fonction render qui, elle, nécessite un return
 class App extends Component {
   state = {
-    title: 'My car catalog'
+    title: 'My car catalog',
+    color: 'green'
 }
   render() {
     return (
       <div className="App">
-        <Mycars title={this.state.title} />
+        <Mycars title={this.state.title} color={this.state.color} />
       </div>
     );
   }
