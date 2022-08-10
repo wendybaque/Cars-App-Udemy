@@ -5,9 +5,10 @@ import './App.css';
 // Transformation de la fonction en class pour pouvoir utiliser le State
 // Nécessite une fonction render qui, elle, nécessite un return
 class App extends Component {
+  // Ici, le State définit les props du composant Mycars
   state = {
     title: 'My car catalog',
-    color: 'green'
+    color: 'blue'
 }
   render() {
     return (

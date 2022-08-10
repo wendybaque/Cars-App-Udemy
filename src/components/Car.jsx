@@ -36,12 +36,12 @@ function Car({children, color}) {
       </div>
     )
   }
-    return <p style={{
-      backgroundColor:'lightblue',
-      width:'400px',
-      padding: '10px',
-      margin: '5px auto'
-      }}> No Data</p>
+    return children && ( 
+      <div>
+        <p>Brand : {children}</p>
+        <p>Color : {colorInfo}</p>
+      </div>
+    )
 }
 
 export default Car;

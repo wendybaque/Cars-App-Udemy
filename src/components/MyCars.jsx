@@ -6,15 +6,13 @@ class Mycars extends Component {
         cars : ["Peugeot", "Renault", "Toyota"]
     }
     render() {
-      const {title} = this.props;
-      const {color} = this.props;
 
         return (
             <div className="cars">
-                <h1>{title} {color}</h1>
-                <Car color="black">{this.props.cars}</Car>
-                <Car>{this.props.cars}</Car>
-                <Car color="red">{this.props.cars}</Car>
+                <h1 style={{color: this.props.color}}>{this.props.title}</h1>
+                <Car color="black">{this.state.cars[0]}</Car>
+                <Car>{this.state.cars[1]}</Car>
+                <Car color="red">{this.state.cars[2]}</Car>
             </div>
         )
     }
