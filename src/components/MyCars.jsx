@@ -12,11 +12,13 @@ class Mycars extends Component {
         return (
             <div className="cars">
                 <Wrapper>
-                <MyHeader />
+                    <MyHeader myStyle={this.props.color}>
+                        {this.props.title}
+                    </MyHeader>
+                </Wrapper>
                 <Car color="black">{this.state.cars[0]}</Car>
                 <Car>{this.state.cars[1]}</Car>
                 <Car color="red">{this.state.cars[2]}</Car>
-                </Wrapper>
             </div>
         )
     }

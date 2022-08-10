@@ -1,11 +1,5 @@
 import React from 'react'
 
-const MyHeader = () => {
-  return (
-    <div>
-      <h1 style={{color: this.props.color}}>{this.props.title}</h1>
-    </div>
-  )
-}
+const MyHeader = ({myStyle, children}) => <h1 style={{color: myStyle}}>{children}</h1>
 
-export default MyHeader
+export default MyHeader;
