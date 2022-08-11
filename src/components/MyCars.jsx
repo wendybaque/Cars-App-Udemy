@@ -42,7 +42,7 @@ class Mycars extends Component {
     // Calcule l'âge de la voiture en fonction de l'année
     getAge = (year) => {
         const now = new Date().getFullYear();
-       const age =  now - year;
+        const age =  now - year;
 
        // Gestion de l'affichage de year.s au pluriel ou non en fonction du nombre d'années :
        let yearStr = "";
@@ -67,7 +67,7 @@ class Mycars extends Component {
                         {this.props.title}
                     </MyHeader>
                     <p onCopy={this.noCopy} onMouseOver={this.addStyle}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi iste fugiat nisi doloribus iusto recusandae minima voluptate magni soluta? Placeat nostrum enim debitis distinctio in totam veritatis ea dolorum harum!</p>
-                    <button onClick={this.addTenYears}>Cars - 10 year</button>
+                    <button onClick={this.addTenYears}>Cars + 10 year</button>
                 </Wrapper>
 
                 {/* Idem map cf plus bas mais avec tableau destructuré : */}
@@ -123,4 +123,6 @@ class Mycars extends Component {
             </div>
         )
     }
-}export default Mycars;
+}
+
+export default Mycars;

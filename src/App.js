@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Mycars from './components/MyCars';
+import Welcome from './components/Welcome';
+
 import './App.css';
 
 // Transformation de la fonction en class pour pouvoir utiliser le State
@@ -52,6 +54,7 @@ changeViaInput = (e) => {
         <button onClick={() => this.changeViaParams('My car catalog via params')}>Change title via params</button>
         <button onClick={this.changeViaBind.bind(this, 'My car catalog via bind')}>Change title via bind</button>
         <input type="text" onChange={this.changeViaInput} value={this.state.title}></input>
+        <Welcome />
       </div>
     );
   }
