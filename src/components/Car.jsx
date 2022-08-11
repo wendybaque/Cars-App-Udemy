@@ -1,7 +1,7 @@
 import React from 'react';
 import Wrapper from './Wrapper'
 
-const Car = ({children, color}) => {
+const Car = ({name, color, year}) => {
   let colorInfo = "";
   if(color) {
     colorInfo = color;
@@ -9,10 +9,11 @@ const Car = ({children, color}) => {
     colorInfo = 'no color';
   }
 
-    return children && ( 
+    return name && ( 
         <Wrapper>
-          <p>Brand : {children}</p>
+          <p>Brand : {name}</p>
           <p>Color : {colorInfo}</p>
+          <p>Car age : {year}</p>
         </Wrapper>
     )
 }
