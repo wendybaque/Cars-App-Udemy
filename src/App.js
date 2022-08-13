@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Mycars from './components/MyCars';
 import Welcome from './components/Welcome';
+import Maman from './components/Maman';
 
 import './App.css';
 
@@ -55,6 +56,7 @@ changeViaInput = (e) => {
         <button onClick={this.changeViaBind.bind(this, 'My car catalog via bind')}>Change title via bind</button>
         <input type="text" onChange={this.changeViaInput} value={this.state.title}></input>
         <Welcome />
+        <Maman />
       </div>
     );
   }
