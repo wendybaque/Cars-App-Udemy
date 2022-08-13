@@ -36,6 +36,7 @@ input {
   box-shadow: 10px 10px 51px -3px rgba(0,0,0,0.67);
 }
 
+/* Modifications pour l'exercice vidéos 30 & 31 : */
 .Welcome {
   border: none;
   border-radius: 5px;
@@ -43,4 +44,25 @@ input {
   margin: 10px;
   padding: 10px;
   box-shadow: 10px 10px 51px -3px rgba(0,0,0,0.67);
+}
+
+/* Modifications pour la partie React Fragment : */
+.carsTable td, .carsTable th {
+  border: 1px solid aqua;
+  border-radius: 5px;
+  padding: 8px;
+  width: 33%;
+  text-align: center;
+}
+
+.carsTable tr:hover {
+  background-color: darkcyan;
+  box-shadow: 10px 10px 51px -3px rgba(0,0,0,0.67);
+}
+
+.carsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: blue;
+  color: aliceblue;
 }

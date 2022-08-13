@@ -11,9 +11,11 @@ const Car = ({name, color, year}) => {
 
     return name && ( 
         <Wrapper>
-          <p>Brand : {name}</p>
-          <p>Color : {colorInfo}</p>
-          <p>Car age : {year}</p>
+          <tr>
+            <td>Brand : {name}</td>
+            <td>Color : {colorInfo}</td>
+            <td>Car age : {year}</td>
+          </tr>
         </Wrapper>
     )
 }

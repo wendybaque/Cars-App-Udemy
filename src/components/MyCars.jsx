@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Car from './Car';
 import MyHeader from "./MyHeader";
 import Wrapper from "./Wrapper";
@@ -61,7 +61,9 @@ class Mycars extends Component {
 
         // const year = new Date().getFullYear();
         return (
-            <div className="cars">
+            // Un Fragment ne peut pas avoir de className ni de style
+            // Fragment peut aussi s'ouvrir et se fermer comme ça : <> et </> snas le mot dedans --> ne fonctionne pas si on utilise une key cf message console.
+            <Fragment>
                 <Wrapper>
                     <MyHeader myStyle={this.props.color}>
                         {this.props.title}
@@ -103,24 +105,33 @@ class Mycars extends Component {
                     })
                 } */}
                 {/* Idem mais avec fonction map destructurée : */}
+                <table className="carsTable">
+                    <tr>
+                        <th>Brand</th>
+                        <th>Year</th>
+                        <th>Color</th>
+                    </tr>
                 {
                     this.state.cars.map(({name, color, year}, index) => {
                         return(
-                            <div  key={index}>
+                            <Fragment key={index}>
                                 <Car 
                                 name={name} 
                                 color={color} 
                                 year={this.getAge(year)}
                                 />
-                            </div>
+                            </Fragment>
                         )
                     })
                 }
+                </table>
+
                 {/* Fonction qui n'a rien à voir avec l'exercice, mais je la laisse là pour la retrouver */}
                 {
                     Math.random()
                 }
-            </div>
+
+            </Fragment>
         )
     }
 }
