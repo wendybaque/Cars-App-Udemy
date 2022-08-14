@@ -125,11 +125,12 @@ class Mycars extends Component {
                     })
                 }
                 </table>
-
+                <hr />
                 {/* Fonction qui n'a rien à voir avec l'exercice, mais je la laisse là pour la retrouver */}
                 {
                     Math.random()
                 }
+                <hr />
 
             </Fragment>
         )

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Mycars from './components/MyCars';
 import Welcome from './components/Welcome';
 import Maman from './components/Maman';
+import Display from './components/Display';
 
 import './App.css';
 
@@ -57,6 +58,7 @@ changeViaInput = (e) => {
         <input type="text" onChange={this.changeViaInput} value={this.state.title}></input>
         <Welcome />
         <Maman />
+        <Display />
       </div>
     );
   }
