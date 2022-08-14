@@ -4,6 +4,7 @@ import Welcome from './components/Welcome';
 import Maman from './components/Maman';
 import Display from './components/Display';
 import Result from './components/Game';
+import Form from './components/Form';
 
 import './App.css';
 
@@ -57,10 +58,17 @@ changeViaInput = (e) => {
         <button onClick={() => this.changeViaParams('My car catalog via params')}>Change title via params</button>
         <button onClick={this.changeViaBind.bind(this, 'My car catalog via bind')}>Change title via bind</button>
         <input type="text" onChange={this.changeViaInput} value={this.state.title}></input>
+        <hr />
         <Welcome />
+        <hr />
         <Maman />
+        <hr />
         <Display />
+        <hr />
         <Result />
+        <hr />
+        <Form />
+        <hr />
       </div>
     );
   }
