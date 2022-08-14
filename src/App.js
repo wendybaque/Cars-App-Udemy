@@ -3,6 +3,7 @@ import Mycars from './components/MyCars';
 import Welcome from './components/Welcome';
 import Maman from './components/Maman';
 import Display from './components/Display';
+import Result from './components/Game';
 
 import './App.css';
 
@@ -59,6 +60,7 @@ changeViaInput = (e) => {
         <Welcome />
         <Maman />
         <Display />
+        <Result />
       </div>
     );
   }

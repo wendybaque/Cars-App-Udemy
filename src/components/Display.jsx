@@ -8,7 +8,7 @@ class Display extends Component {
   return (
     <div>
         <hr />
-        <h1>Téléphone, the group !</h1>
+        <h1>☎️ Téléphone, the group ! ☎️</h1>
         <Singers name="Jean-Louis Aubert" age="67 ans"/>
         <Singers name="Richard Kolinka" age="69 ans"/>
         <Singers name="Louis Bertignac" age="68 ans"/>
