@@ -67,7 +67,7 @@ changeViaInput = (e) => {
         <hr />
         <Result />
         <hr />
-        <Form />
+        <Form head={false}/>
         <hr />
       </div>
     );

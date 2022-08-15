@@ -1,0 +1,22 @@
+.titleGreen {
+    color:green;
+    font-size:45px;
+}
+
+.buttonGreen {
+    color:lightgreen;
+    background-color: darkgreen;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.violet {
+    color: blueviolet;
+}
+
+.bigFont {
+    font-size: 70px;
+    font-weight: bold;
+}
