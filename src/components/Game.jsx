@@ -30,11 +30,11 @@ class Result extends Component {
     // }
 
     // SOLUTION 3 (ternaire)
-    render(){
-        return(
-            this.state.winner ? (<h1>Bravo, {this.state.name} ! 👏</h1>) : (<h1>Dommage, {this.state.name}, tu as perdu ! 😵</h1>)
-        )
-    }
+    // render(){
+    //     return(
+    //         this.state.winner ? (<h1>Bravo, {this.state.name} ! 👏</h1>) : (<h1>Dommage, {this.state.name}, tu as perdu ! 😵</h1>)
+    //     )
+    // }
 
     // SOLUTION 4 (&&/AND) (n'affiche le texte que s'il gagne/que la condition est true)
     // render(){
@@ -42,6 +42,22 @@ class Result extends Component {
     //         this.state.winner && <h1>Bravo, {this.state.name} ! 👏</h1>
     //     )
     // }
+
+    // SOLUTON 5 (Bootsrap + bouton changement de state)
+    render () {    
+        
+        const stateColor = this.state.winner ? "alert-success" : "alert-danger";
+
+        return(
+            <div className="container">
+                <div className={`alert ${stateColor}`} role="alert">
+                    {this.state.winner ? ` Bravo, ${this.state.name} ! 👏` : `Dommage, ${this.state.name}, tu as perdu ! 😵`}
+                </div>
+
+                <button className="btn btn-info" onClick={() => this.setState({winner:!this.state.winner})}>Change the state</button>
+            </div>
+        )
+    }
 }
 
 export default Result;

@@ -3,7 +3,7 @@ import CarImg from "./CarImg";
 import MyHeaderOne from "../components/myHeaderOne";
 
 import "../components/form.css";
-// import de Bootstrap :
+// import de modules css (document à part) :
 import styles from "./myCss.module.css";
 // import de Styled Components :
 import styled from "styled-components"
