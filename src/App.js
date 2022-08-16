@@ -11,6 +11,7 @@ import CustomBtn from './components/CustomBtn';
 import Welcome2 from './components/Welcome2';
 import Template from './components/Template';
 import Buttons from './components/Buttons';
+import LifeCycle from './components/LifeCycle';
 
 import './App.css';
 
@@ -20,10 +21,11 @@ class App extends Component {
   // Ici, le State définit les props du composant Mycars
   state = {
     title: 'My car catalog',
-    color: 'blue'
+    color: 'blue',
+    display: true
 }
 
-// Change le titre quand on clique sur le bouton 
+// Change le titre quand on clique sur le bouton
 changeTitle = (e) => {
   console.log(e.target);
   this.setState({
@@ -55,6 +57,19 @@ changeViaInput = (e) => {
   })
 }
 
+// Vidéo 57 : affiche ou pas le component en fonction du state de display :
+removeOrDisplay = () => {
+  if(this.state.display){
+    this.setState({
+      display: false
+    })
+  } else {
+    this.setState({
+      display: true
+    })
+  }
+}
+
   render() {
     const sayHello = () => alert ("Hello world !");
     const customBtn = {
@@ -69,6 +84,8 @@ changeViaInput = (e) => {
         display:'block',
         margin:'5px auto'
     }
+
+    const showComponent = this.state.display ? (<LifeCycle name="Toto 2"/>) : (<div><p>Il n'y a pas de composant.</p></div>);
 
     return (
       <div className="App">
@@ -99,6 +116,12 @@ changeViaInput = (e) => {
         <Template />
         <Welcome2 />
         <Buttons />
+        <hr />
+        {/* Exercice lifecycle vidéo 55 phase de montage*/}
+        {/* <LifeCycle name="Toto 2"/> */}
+        {/* Pour accéder à la méthode componentWillUnmount et retirer le composant LifeCycle */}
+        {showComponent}
+        <button onClick={this.removeOrDisplay}>Cliquer ici</button>
       </div>
     );
   }
