@@ -5,6 +5,7 @@ import Maman from './components/Maman';
 import Display from './components/Display';
 import Result from './components/Game';
 import Form from './components/Form';
+import CustomBtn from './components/CustomBtn';
 
 import './App.css';
 
@@ -50,6 +51,8 @@ changeViaInput = (e) => {
 }
 
   render() {
+    const sayHello = () => alert ("Hello world !");
+
     return (
       <div className="App">
         <Mycars title={this.state.title} color={this.state.color} />
@@ -69,6 +72,7 @@ changeViaInput = (e) => {
         <hr />
         <Form head={false}/>
         <hr />
+        <CustomBtn btnStyle={{backgroundColor:'yellow', color:'blue'}} handleClick={sayHello}>Say hello</CustomBtn>
       </div>
     );
   }

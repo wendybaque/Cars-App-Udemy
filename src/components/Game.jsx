@@ -72,6 +72,10 @@ class Result extends Component {
                 <CustomBtn btnStyle={successBtn}>Cliquez ici</CustomBtn>
                 <CustomBtn btnStyle={dangerBtn}>Cliquez ici</CustomBtn>
                 <CustomBtn btnStyle={{backgroundColor:'blue'}}>Cliquez ici</CustomBtn>
+
+                {/* Exercice onClick sur custom button vidéos 49-50 */}
+                <CustomBtn btnStyle={successBtn} handleClick={this.stateColor}>Changer le statut</CustomBtn>
+
             </div>
         )
     }

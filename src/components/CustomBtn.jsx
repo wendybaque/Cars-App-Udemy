@@ -1,4 +1,4 @@
-const customBtn = ({btnStyle, children}) => {
+const customBtn = ({btnStyle, children, handleClick}) => {
 
     const btn = {
         backgroundColor: 'grey',
@@ -14,7 +14,7 @@ const customBtn = ({btnStyle, children}) => {
     }
 
     return (
-        <button style={{...btn, ...btnStyle}}>
+        <button style={{...btn, ...btnStyle}} onClick={handleClick}>
             {children}
         </button>
     )
