@@ -1,6 +1,7 @@
 // Exercice destructuring et conditions :
 
 import React, {Component} from "react";
+import CustomBtn from "./CustomBtn";
 
 class Result extends Component {
     state = {
@@ -44,9 +45,20 @@ class Result extends Component {
     // }
 
     // SOLUTON 5 (Bootsrap + bouton changement de state)
-    render () {    
+    render () {   
         
         const stateColor = this.state.winner ? "alert-success" : "alert-danger";
+
+        // Syle des boutons pour l'exercice vidéos 47-48 :
+        const successBtn = {
+            backgroundColor:'green',
+            color:'black'
+        }
+
+        const dangerBtn = {
+            backgroundColor:'red',
+            borderRadius:'20px'
+        }
 
         return(
             <div className="container">
@@ -55,6 +67,11 @@ class Result extends Component {
                 </div>
 
                 <button className="btn btn-info" onClick={() => this.setState({winner:!this.state.winner})}>Change the state</button>
+                <hr />
+                {/* Exercice style vidéos 47-48 */}
+                <CustomBtn btnStyle={successBtn}>Cliquez ici</CustomBtn>
+                <CustomBtn btnStyle={dangerBtn}>Cliquez ici</CustomBtn>
+                <CustomBtn btnStyle={{backgroundColor:'blue'}}>Cliquez ici</CustomBtn>
             </div>
         )
     }
