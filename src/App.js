@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Container, Button} from 'react-bootstrap';
+
 import Mycars from './components/MyCars';
 import Welcome from './components/Welcome';
 import Maman from './components/Maman';
@@ -6,6 +8,9 @@ import Display from './components/Display';
 import Result from './components/Game';
 import Form from './components/Form';
 import CustomBtn from './components/CustomBtn';
+import Welcome2 from './components/Welcome2';
+import Template from './components/Template';
+import Buttons from './components/Buttons';
 
 import './App.css';
 
@@ -52,6 +57,18 @@ changeViaInput = (e) => {
 
   render() {
     const sayHello = () => alert ("Hello world !");
+    const customBtn = {
+      backgroundColor: 'grey',
+        border:'none',
+        color:'#fff',
+        fontSize:'19px',
+        textAlign:'center',
+        padding:'15px 30px',
+        textDecoration:'none',
+        borderRadius:'7px',
+        display:'block',
+        margin:'5px auto'
+    }
 
     return (
       <div className="App">
@@ -72,7 +89,16 @@ changeViaInput = (e) => {
         <hr />
         <Form head={false}/>
         <hr />
-        <CustomBtn btnStyle={{backgroundColor:'yellow', color:'blue'}} handleClick={sayHello}>Say hello</CustomBtn>
+        {/* Exercice package react-Boostrap vidéo 53 en ajoutant un Container et Button */}
+        <Container>
+          <CustomBtn btnStyle={{backgroundColor:'yellow', color:'blue'}} handleClick={sayHello}>Say hello</CustomBtn>
+          <Button onClick={sayHello} variant='warning' style={customBtn}>Say hello with React-Bootstrap package</Button>
+        </Container>
+        <hr />
+        {/* Exercice package react-Boostrap vidéo 51 */}
+        <Template />
+        <Welcome2 />
+        <Buttons />
       </div>
     );
   }

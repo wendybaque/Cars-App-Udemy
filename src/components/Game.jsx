@@ -68,6 +68,7 @@ class Result extends Component {
 
                 <button className="btn btn-info" onClick={() => this.setState({winner:!this.state.winner})}>Change the state</button>
                 <hr />
+                
                 {/* Exercice style vidéos 47-48 */}
                 <CustomBtn btnStyle={successBtn}>Cliquez ici</CustomBtn>
                 <CustomBtn btnStyle={dangerBtn}>Cliquez ici</CustomBtn>
@@ -75,7 +76,6 @@ class Result extends Component {
 
                 {/* Exercice onClick sur custom button vidéos 49-50 */}
                 <CustomBtn btnStyle={successBtn} handleClick={this.stateColor}>Changer le statut</CustomBtn>
-
             </div>
         )
     }
