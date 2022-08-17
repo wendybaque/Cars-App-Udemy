@@ -14,6 +14,7 @@ import Buttons from './components/Buttons';
 import LifeCycle from './components/LifeCycle';
 
 import './App.css';
+import UseState from './components/UseState';
 
 // Transformation de la fonction en class pour pouvoir utiliser le State
 // Nécessite une fonction render qui, elle, nécessite un return
@@ -122,6 +123,9 @@ removeOrDisplay = () => {
         {/* Pour accéder à la méthode componentWillUnmount et retirer le composant LifeCycle */}
         {showComponent}
         <button onClick={this.removeOrDisplay}>Cliquer ici</button>
+        <hr />
+        {/* Exercice vidéo 77 : useState  */}
+        <UseState />
       </div>
     );
   }
