@@ -1,4 +1,5 @@
 // Section 6 : cycle de vie des composants :
+// méthodes de cycle de vie ne sont accessibles que dans des composants de type class !
 // Snippet rce pour une class avec Component
 
 import React, { Component } from 'react'

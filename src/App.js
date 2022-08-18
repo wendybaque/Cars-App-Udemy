@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import './App.css';
 
 import Mycars from './components/MyCars';
@@ -15,6 +15,8 @@ import Buttons from './components/Buttons';
 import LifeCycle from './components/LifeCycle';
 import UseState from './components/UseState';
 import Todo from './components/Todo';
+import Counter from './components/Counter';
+import Container from './components/Container';
 
 // Transformation de la fonction en class pour pouvoir utiliser le State
 // Nécessite une fonction render qui, elle, nécessite un return
@@ -129,6 +131,12 @@ removeOrDisplay = () => {
         <hr />
         {/* Exercice Todolist vidéo 79 (useState) : */}
         <Todo />
+        <hr />
+        {/* Exercice Counter vidéo 80 : useEffect après render : */}
+        <Counter />
+        <hr />
+        {/* Exercice Vidéo 84 : useEffect et nettoyage : */}
+        <Container />
         <hr />
       </div>
     );
