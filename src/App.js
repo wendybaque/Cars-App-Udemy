@@ -19,6 +19,7 @@ import Todo from './components/Todo';
 import Counter from './components/Counter';
 import Container from './components/Container';
 import Profile from './components/Profile';
+import Count from './components/Count';
 
 // Transformation de la fonction en class pour pouvoir utiliser le State
 // Nécessite une fonction render qui, elle, nécessite un return
@@ -151,6 +152,9 @@ removeOrDisplay = () => {
             <Profile />
           </ColorContext.Provider>
         </UserContext.Provider>
+        <hr />
+        {/* Exercice Vidéos 87 & 88 : useReducer : */}
+        <Count />
         <hr />
       </div>
     );
