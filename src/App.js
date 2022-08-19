@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
 import './App.css';
+import { UserContext, ColorContext } from './components/MyContext';
 
 import Mycars from './components/MyCars';
 import Welcome from './components/Welcome';
@@ -17,15 +18,21 @@ import UseState from './components/UseState';
 import Todo from './components/Todo';
 import Counter from './components/Counter';
 import Container from './components/Container';
+import Profile from './components/Profile';
 
 // Transformation de la fonction en class pour pouvoir utiliser le State
 // Nécessite une fonction render qui, elle, nécessite un return
 class App extends Component {
-  // Ici, le State définit les props du composant Mycars
+  // Ici, le State définit les props du composant Mycars + Profile
   state = {
     title: 'My car catalog',
     color: 'blue',
-    display: true
+    display: true,
+    user: {
+      name: 'Lisa',
+      age: 8
+    }
+
 }
 
 // Change le titre quand on clique sur le bouton
@@ -137,6 +144,13 @@ removeOrDisplay = () => {
         <hr />
         {/* Exercice Vidéo 84 : useEffect et nettoyage : */}
         <Container />
+        <hr />
+        {/* Exercice Vidéo 85 : useContext : */}
+        <UserContext.Provider value={this.state.user}>
+          <ColorContext.Provider value={'red'}>
+            <Profile />
+          </ColorContext.Provider>
+        </UserContext.Provider>
         <hr />
       </div>
     );
