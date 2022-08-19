@@ -20,6 +20,7 @@ import Counter from './components/Counter';
 import Container from './components/Container';
 import Profile from './components/Profile';
 import Count from './components/Count';
+import UseCallback from './components/UseCallback';
 
 // Transformation de la fonction en class pour pouvoir utiliser le State
 // Nécessite une fonction render qui, elle, nécessite un return
@@ -155,6 +156,9 @@ removeOrDisplay = () => {
         <hr />
         {/* Exercice Vidéos 87 & 88 : useReducer : */}
         <Count />
+        <hr />
+        {/* Exercice vidéos 89-90 : useCallback */}
+        <UseCallback />
         <hr />
       </div>
     );
